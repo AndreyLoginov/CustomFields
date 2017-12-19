@@ -1,0 +1,108 @@
+@mixin transition($transitions...) {
+	-webkit-transition: $transitions;
+	-moz-transition: $transitions;
+	-o-transition: $transitions;
+	transition: $transitions;
+}
+@mixin transform($transforms...) {
+	-webkit-transform: $transforms;
+	-moz-transform: $transforms;
+	-ms-transform: $transforms;
+	-o-transform: $transforms;
+	transform: $transforms;
+}
+@mixin animation($animations...) {
+	-webkit-animation: $animations;
+	-moz-animation: $animations;
+	animation: $animations;
+}
+@mixin userselect() {
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+@mixin grayscale($val) {
+	filter: url("../img/filters.svg#grayscale"+$val);
+	-webkit-filter: grayscale($val);
+	filter: grayscale($val);
+}
+@mixin flexbox() {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+@mixin flex-param($flow, $justify, $align) {
+	-webkit-flex-flow: $flow;
+	-moz-flex-flow: $flow;
+	-ms-flex-flow: $flow;
+	flex-flow: $flow;
+	-webkit-justify-content: $justify;
+	-moz-justify-content: $justify;
+	justify-content: $justify;
+	-webkit-align-content: $align;
+	align-content: $align;
+}
+@mixin flex-order($val) {
+  -webkit-box-ordinal-group: $val;  
+  -moz-box-ordinal-group: $val;     
+  -ms-flex-order: $val;     
+  -webkit-order: $val;  
+  order: $val;
+}
+@mixin scr-xlarge {
+  @media only screen and (max-width: 1680px) {
+    @content;
+  }
+}
+@mixin scr-large {
+  @media only screen and (max-width: 1520px) {
+    @content;
+  }
+}
+@mixin scr-xmedium {
+  @media only screen and (max-width: 1388px) {
+    @content;
+  }
+}
+@mixin scr-medium {
+  @media only screen and (max-width: 1260px) {
+    @content;
+  }
+}
+@mixin scr-medium-h {
+  @media only screen and (max-height: 800px) {
+    @content;
+  }
+}
+@mixin scr-small {
+  @media only screen and (max-width: 1020px) {
+    @content;
+  }
+}
+@mixin placeholder {
+    &::-webkit-input-placeholder { @content; }
+    &::-moz-placeholder { @content; }
+    &:-moz-placeholder { @content; }
+    &:-ms-input-placeholder { @content; }
+    &::-ms-input-placeholder { @content; }
+    &::placeholder { @content; }
+}
+@mixin selection {
+	&::-moz-selection { @content; }
+	&::selection { @content; }
+}
+@mixin truncate($truncation-boundary) {
+    width: $truncation-boundary;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+@mixin truncate-max($truncation-boundary) {
+    max-width: $truncation-boundary;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
