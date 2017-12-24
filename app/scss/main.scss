@@ -1,25 +1,76 @@
 @import "variables.scss";
 @import "mixins.scss";
 
-.content {
-	position: relative;
-	width: 100%;
-	height: 100%;
+* {
+  margin: 0px;
+  border: 0px;
+  padding: 0px;
+}
+
+.btn-submit-1 {
+	&:hover {
+		background-color: $btn-color-1 !important;
+	}
+}
+
+.formControlSelect {
+	width: 450px;
+	height: 60px;
+	border-radius: 4px;
 	background-color: #fff;
+	margin-bottom: 40px !important;
+}
 
-	&_wrp {
-		position: absolute;
-		width: 100px;
-		height: 100px;
-		top: 100px;
-		left: 100px;
-		cursor: pointer;
-		background-color: darken($grey-color, 5%);
-		@include transition(all .3s ease-out);
+.select-1 {
+	width: 100%;
+	background-color: transparent;
+	height: 60px;
 
-		&:hover {
-			top: 120px;
-			left: 120px;
+	&:after,
+	&:before {
+		display: none;
+	}
+
+	div {
+		background-color: transparent !important;
+	}
+
+	select {
+		width: -webkit-calc(100% - 60px) !important;
+		width: calc(100% - 60px) !important;
+		padding: 0 40px 0 20px !important;
+	}
+}
+
+.customInput {
+
+	/*&:after,
+	&:before {
+		display: none;
+	}*/
+}
+
+.checkbox-1 {
+	svg {
+		path {
 		}
 	}
+}
+
+.error_icon {
+	position: absolute;
+	top: 0;
+	left: 2px;
+	width: 18px !important;
+	height: 18px !important;
+}
+
+.field_valid {
+	> div {
+		border-color: #6FCF97;
+	}
+}
+
+.new_class {
+	z-index: 10;
 }

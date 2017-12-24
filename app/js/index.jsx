@@ -1,13 +1,7 @@
 import React from 'react';
 import { render } from 'react-dom';
-import Button from 'material-ui/Button';
+import MyReactComponent from './MyReactComponent';
 
-function App() {
-  return (
-    <Button raised color="primary">
-      Hello World!!!
-    </Button>
-  );
-}
+const rootElement = document.getElementById('app');
 
-render(<App />, document.querySelector('#app'));
+render(<MyReactComponent />, rootElement);
